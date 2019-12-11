@@ -1,0 +1,5 @@
+git+https://github.com/TBA-API/tba-api-client-python
+
+# development
+black
+isort
