@@ -14,10 +14,11 @@ class ApiClientWrapper(tbaapiv3client.ApiClient):
 
 
 class Api:
-    def __init__(self, token, debug=False, async_req=False):
-        self.token = token
-        self.debug = debug
-        self.async_req = async_req
+    def __init__(self, token, *, debug=False, async_req=False, pythonanywhere=False):
+        self.token = str(token)
+        self.debug = bool(debug)
+        self.async_req = bool(async_req)
+        self.pythonanywhere = bool(pythonanywhere)
 
         self.create_api()
         self.create_child_apis()
@@ -27,6 +28,8 @@ class Api:
 
         config.api_key["X-TBA-Auth-Key"] = self.token
         config.debug = self.debug
+        if self.pythonanywhere:
+            config.proxy = "http://proxy.server:3128"
 
         self.api = ApiClientWrapper(config, self.async_req)
 
