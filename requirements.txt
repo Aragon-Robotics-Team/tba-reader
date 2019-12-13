@@ -1,4 +1,4 @@
-git+https://github.com/TBA-API/tba-api-client-python
+git+https://github.com/Aragon-Robotics-Team/tba-api-client-python
 
 # development
 black

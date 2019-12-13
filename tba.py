@@ -1,3 +1,5 @@
+# OBSOLETE, DO NOT USE
+
 def main():
     import tbaapiv3client
     import csv
