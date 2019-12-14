@@ -76,5 +76,3 @@ main()
         file = csv.writer(file)
         file.writerow(["Number", "Name", "City", "State", "Rookie", "Events"])
         file.writerows(Teams)
-
-
