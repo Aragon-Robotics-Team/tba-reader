@@ -37,3 +37,5 @@ class Api:
         self.event = tbaapiv3client.EventApi(self.api)
         self.team = tbaapiv3client.TeamApi(self.api)
         self.tba = tbaapiv3client.TBAApi(self.api)
+        self.match = tbaapiv3client.MatchApi(self.api)
+        self.list = tbaapiv3client.ListApi(self.api)
